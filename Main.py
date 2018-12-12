@@ -120,14 +120,78 @@
 
 
 import turtle
+import time
  
 
 turtle.setup(720,480)
-wiz = turtle.Turtle()
+leg1 = turtle.Turtle()
+leg2 = turtle.Turtle()
+leg3 = turtle.Turtle()
+p1 = turtle.Turtle()
+p2 = turtle.Turtle()
+xStart = -210
+yStart = 180
+pxStart = 50
+LOW_Y = -122.57
 
-while True:
-    wiz.penup()
-    wiz.goto(-250, 200)
-    wiz.pendown()
-    wiz.setheading(252)
-    wiz.forward(20)
+legF = 320
+def A():
+    leg1.penup()
+    leg2.penup()
+    leg3.penup()
+    leg1.goto(xStart, yStart)
+    leg2.goto(xStart, yStart)
+    leg3.goto(-275, 0)
+    leg1.pendown()
+    leg2.pendown()
+    leg3.hideturtle()
+    leg1.setheading(250)
+    leg2.setheading(289)
+    #FILLING IN
+    leg1.forward(legF)
+    leg2.forward(legF)
+    leg3.forward(127)
+    leg1.setheading(0)
+    leg1.forward(30)
+    leg1.goto(-250, -20)
+    leg1.setheading(0)
+    leg1.forward(80)
+    leg1.goto(-135, -122)
+    leg1.goto(-105.82,-122.57)
+    leg3.pendown()
+    leg3.showturtle()
+    leg3.setheading(109)
+    leg3.forward(30)
+    leg3.seth(180)
+    leg3.forward(107)
+    leg3.hideturtle()
+    leg1.hideturtle()
+    leg2.hideturtle()
+    
+
+def P():
+    p1.penup()
+    p2.penup()
+    p1.goto(pxStart, yStart)
+    p2.goto(pxStart, yStart)
+    p1.pendown()
+    p2.pendown()
+    p1.goto(pxStart, LOW_Y)
+    p2.speed(10)
+    circle("down")
+
+def circle(b):
+    if b == "down":
+        for i in range(265):
+            p2.forward(1)
+            p2.left(-.7)
+    else:
+        for i in range(265):
+            p2.forward(1)
+            p2.left(.7)
+        
+        
+        
+A()
+P()
+time.sleep(20)
