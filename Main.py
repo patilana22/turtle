@@ -134,7 +134,7 @@ yStart = 180
 pxStart = 50
 LOW_Y = -122.57
 
-legF = 320
+legF = 320 
 def A():
     leg1.penup()
     leg2.penup()
@@ -179,6 +179,12 @@ def P():
     p1.goto(pxStart, LOW_Y)
     p2.speed(10)
     circle("down")
+    #FILLING
+    p1.seth(0)
+    p1.forward(30)
+    p1.seth(90)
+    p1.forward((LO)
+    circle("up")
 
 def circle(b):
     if b == "down":
@@ -187,8 +193,8 @@ def circle(b):
             p2.left(-.7)
     else:
         for i in range(265):
-            p2.forward(1)
-            p2.left(.7)
+            p1.forward(1)
+            p1.left(.7)
         
         
         
